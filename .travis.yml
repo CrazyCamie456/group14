@@ -7,5 +7,5 @@ services:
 - docker
 
 after_success:
-- docker build -t se_methods .
-- docker run se_methods
+- docker build -t group14 .
+- docker run group14
