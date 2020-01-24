@@ -19,7 +19,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.set08103.group14</mainClass>
+                            <mainClass>com.set08103.group14.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
