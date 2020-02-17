@@ -1,6 +1,8 @@
 
 package com.set08103.group14;
 
+import java.util.Scanner;
+
 public class Query9 {
     public static void run() {
         DatabaseLink db = DatabaseLink.Instance();
@@ -9,8 +11,8 @@ public class Query9 {
         do{
             String regionName = "";
             System.out.println("Please enter a valid region");
-            System.in.readline(regionName);
-
+            Scanner scanner = new Scanner(System. in);
+            regionName = regionName.concat(scanner.nextLine());
             String query = "SELECT Name, Population FROM cities WHERE (SELECT Name FROM Country WHERE " + regionName + "ORDER BY Population DESC;";
 
 
