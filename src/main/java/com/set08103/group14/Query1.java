@@ -7,6 +7,9 @@ public class Query1 {
 
         String query = "SELECT Name, Population FROM country ORDER BY Population DESC;";
 
-        db.RunQuery(query);
+        ResultSet result = db.RunQuery(query);
+        while(result.next()) {
+            console.WriteLine(result.getString("Name") + " | " + result.getInt("Population"));
+        }
     }
 }

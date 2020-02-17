@@ -18,7 +18,7 @@ public class DatabaseLink {
         // @TODO Create a DatabaseLink and assign con.
     }
 
-    public rset runQuery(String query) {
+    public ResultSet runQuery(String query) {
         try {
             Statement stmt = con.createStatement();
             return stmt.executeQuery(query);
