@@ -9,7 +9,7 @@ public class Query1 {
 
         ResultSet result = db.RunQuery(query);
         while(result.next()) {
-            console.WriteLine(result.getString("Name") + " | " + result.getInt("Population"));
+            System.out.writeln(result.getString("Name") + " | " + result.getInt("Population"));
         }
     }
 }
