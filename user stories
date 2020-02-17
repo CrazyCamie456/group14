@@ -5,3 +5,4 @@ As a user I want to be able to choose an amount of cities and get there populati
 As a user I want to be able to retrieve all the capital cities in the world in a sorted list so that I can generate a report
 As a user I want to be able to select a number of the most populated cities so that I can generate a report
 As a user I want to be able to get the number of people living in cities as well as the number of people not living in cities so that I can generate a report
+As a user I want to be able to aquire the amount of people in a certain catagory so that I can generate a report
