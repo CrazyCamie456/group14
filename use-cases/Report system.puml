@@ -1,0 +1,21 @@
+@startuml
+actor User as "User"
+
+rectangle Database
+
+rectangle "Report System" {
+    usecase UC1 as "Generate reports by \nusing specified parameters"
+    usecase UC2 as "View records"
+
+
+    usecase UCa as "Sort reports"
+
+    User - UC1
+    User - UC2
+
+    UC1 ..> UCa : include
+    UC2 .. UC1
+    UC1 - Database
+    UC2 - Database
+}
+@enduml
