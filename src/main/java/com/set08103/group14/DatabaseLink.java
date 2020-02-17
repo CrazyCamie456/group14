@@ -14,6 +14,8 @@ public class DatabaseLink {
 
     }
 
+    // @TODO Create a disconnect function.
+
     private DatabaseLink() {
         // @TODO Create a DatabaseLink and assign con.
     }
