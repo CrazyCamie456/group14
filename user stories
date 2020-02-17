@@ -7,3 +7,4 @@ As a user I want to be able to select a number of the most populated cities so t
 As a user I want to be able to get the number of people living in cities as well as the number of people not living in cities so that I can generate a report
 As a user I want to be able to aquire the amount of people in a certain catagory so that I can generate a report
 As a user I want to be able to be able to sort the population by languages and get a percentage so that I can generate a report
+As a user I want to be able to query a database for information about countries so that I can generate a report
