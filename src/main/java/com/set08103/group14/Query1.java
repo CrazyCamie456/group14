@@ -16,13 +16,13 @@ public class Query1 {
     public static void run() {
         DatabaseLink db = DatabaseLink.Instance();
 
-        String query = "SELECT Name, Population FROM country ORDER BY Population DESC;";
+        String query = "SELECT * FROM country ORDER BY Population DESC;";
 
         ResultSet result = db.runQuery(query);
         try {
             //While there are more rows to read, read them.
             while (result.next()) {
-                System.out.println(result.getInt("Code")  + "\t\t| " +
+                System.out.println(result.getString("Code")  + "\t\t| " +
                         result.getString("Name") + "\t\t| " +
                         result.getString("Continent") + "\t\t| " +
                         result.getString("Region") + "\t\t| " +

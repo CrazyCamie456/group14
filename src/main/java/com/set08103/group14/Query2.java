@@ -25,6 +25,9 @@ public class Query2 {
 
 		boolean valid = false;
 		while (!valid) {
+			try {
+				Thread.sleep(30000);
+			} catch (Exception e){}
 			inputContinent = in.nextLine();
 			String query = "SELECT Name, Population FROM country WHERE Continent=`" + inputContinent + "` ORDER BY Population DESC;";
 			result = db.runQuery(query);

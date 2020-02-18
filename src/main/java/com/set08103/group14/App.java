@@ -7,10 +7,12 @@ public class App {
         System.out.println("Query 1");
         Query1.run();
 
-        System.out.println("Query 2");
-        Query2.run();
+        //System.out.println("Query 2");
+        //Query2.run();
 
-        System.out.println("Query 3");
-        Query3.run();
+       // System.out.println("Query 3");
+        //Query3.run();
+
+        DatabaseLink.disconnect();
     }
 }

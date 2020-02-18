@@ -44,7 +44,7 @@ public class DatabaseLink {
         }
 
         // Connection to the database
-        instance.con = null;
+        //con = null;
         int retries = 100;
         for (int i = 0; i < retries; ++i)
         {
