@@ -9,7 +9,7 @@ import java.util.Scanner;
 */
 public class Query3 {
 	/*
-		Runs a query and returns all countries within a user-given region sorted by population.
+		Runs a query and prints all countries within a user-given region sorted by population.
 		Parameters: none
 		Returns: none
 	*/

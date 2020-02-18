@@ -11,7 +11,7 @@ import java.util.Scanner;
 */
 public class Query2 {
 	/*
-	Runs a query and returns all countries within a user-given continent sorted by population.
+	Runs a query and prints all countries within a user-given continent sorted by population.
 	Parameters: none
 	Returns: none
 	*/
