@@ -8,7 +8,7 @@ public class Query17 {
         ResultSet result;
         do{
             //creates the query
-            String query = "SELECT Name, Population, District, (SELECT Name FROM country WHERE Code = CountryCode) FROM cities WHERE CountryCode = (SELECT capital From country);";
+            String query = "SELECT Name, Population, (SELECT Name FROM country WHERE Code = CountryCode) FROM cities WHERE CountryCode = (SELECT Capital From country);";
             //Gets the results from the database using the query just created
             result = db.RunQuery(query);
         }while(result.length() == 0 );
