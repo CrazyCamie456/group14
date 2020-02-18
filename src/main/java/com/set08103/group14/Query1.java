@@ -22,11 +22,11 @@ public class Query1 {
         try {
             //While there are more rows to read, read them.
             while (result.next()) {
-                System.out.println(result.getInt("Code")  + " | " +
-                        result.getString("Name") + " | " +
-                        result.getString("Continent") + " | " +
-                        result.getString("Region") + " | " +
-                        result.getInt("Population") + " | " +
+                System.out.println(result.getInt("Code")  + "\t\t| " +
+                        result.getString("Name") + "\t\t| " +
+                        result.getString("Continent") + "\t\t| " +
+                        result.getString("Region") + "\t\t| " +
+                        result.getInt("Population") + "\t\t | " +
                         result.getString("Capital")
                 );
             }
