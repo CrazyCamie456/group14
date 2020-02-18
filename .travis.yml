@@ -1,0 +1,13 @@
+
+sudo: required
+
+language: java
+
+services:
+- docker
+- mysql
+
+after_success:
+- docker-compose down
+- docker-compose build
+- docker-compose up --abort-on-container-exit
