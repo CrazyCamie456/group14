@@ -24,7 +24,7 @@ public class Query18 {
             //reads in the district
             districtName = districtName.concat(scanner.nextLine());
             //creates the query using user inputs
-            String query = "SELECT  Name, Population, District, (SELECT Name FROM country WHERE Code = CountryCode) FROM cities WHERE CountryCode = (SELECT Code FROM country WHERE LocalName =  " + districtName + ");";
+            String query = "SELECT  Name, Population, (SELECT Name FROM country WHERE Code = CountryCode) FROM cities WHERE CountryCode = (SELECT Code FROM country WHERE LocalName =  " + districtName + ");";
             //Gets the results from the database using the query just created
             result = db.RunQuery(query);
         }while(districtName == "" && resultNumber == 0);
