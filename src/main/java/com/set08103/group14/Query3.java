@@ -3,7 +3,16 @@ package com.set08103.group14;
 import java.sql.*;
 import java.util.Scanner;
 
+/*
+    Implements the third query.
+    "All the countries in a region organised by largest population to smallest."
+*/
 public class Query3 {
+	/*
+		Runs a query and returns all countries within a user-given region sorted by population.
+		Parameters: none
+		Returns: none
+	*/
 	public static void run() {
 		DatabaseLink db = DatabaseLink.Instance();
 		Scanner in = new Scanner(System.in);
@@ -18,6 +27,7 @@ public class Query3 {
 			String query = "SELECT Name, Population FROM country WHERE Region=`" + inputRegion + "` ORDER BY Population DESC;";
 			result = db.runQuery(query);
 			try {
+				//Check if there is anything in the dataset.
 				if (result.first()) {
 					valid = true;
 				}
@@ -28,7 +38,9 @@ public class Query3 {
 		}
 
 		try {
+			//Return to the start of the dataset.
 			result.beforeFirst();
+			//While there are more rows to read, read them.
 			while (result.next()) {
 				System.out.println(result.getInt("Code")  + " | " +
 						result.getString("Name") + " | " +

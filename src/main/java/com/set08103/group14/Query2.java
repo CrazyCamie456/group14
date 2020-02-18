@@ -5,7 +5,16 @@ import java.sql.*;
 import java.sql.ResultSet;
 import java.util.Scanner;
 
+/*
+    Implements the second query.
+    "All the countries in a continent organised by largest population to smallest."
+*/
 public class Query2 {
+	/*
+	Runs a query and returns all countries within a user-given continent sorted by population.
+	Parameters: none
+	Returns: none
+	*/
 	public static void run() {
 		DatabaseLink db = DatabaseLink.Instance();
 		Scanner in = new Scanner(System.in);
@@ -20,6 +29,7 @@ public class Query2 {
 			String query = "SELECT Name, Population FROM country WHERE Continent=`" + inputContinent + "` ORDER BY Population DESC;";
 			result = db.runQuery(query);
 			try {
+				//Check if there is anything in the dataset.
 				if (result.first()) {
 					valid = true;
 				}
@@ -30,7 +40,9 @@ public class Query2 {
 		}
 
 		try {
+			//Return to the start of the dataset.
 			result.beforeFirst();
+			//While there are more rows to read, read them.
 			while (result.next()) {
 				System.out.println(result.getInt("Code")  + " | " +
 						result.getString("Name") + " | " +
