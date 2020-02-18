@@ -1,5 +1,7 @@
 package com.set08103.group14;
 
+import java.io.IOException;
+
 public class App {
 
     public static void main(String[] args) {
@@ -14,5 +16,10 @@ public class App {
         //Query3.run();
 
         DatabaseLink.disconnect();
+        try {
+            Runtime.getRuntime().exec("sudo service mysql stop");
+        } catch (IOException e) {
+            /* Ignored */
+        }
     }
 }
