@@ -12,7 +12,7 @@ public class QueryWorldPopulation {
         ResultSet result = db.RunQuery(query);
         //if there another result get the next one
         while(result.next()) {
-            System.out.println(result.getString("Name") + " | " + result.getInt("Population"));
+            System.out.println("The population is " + result.getInt("Population"));
         }
     }
 }
