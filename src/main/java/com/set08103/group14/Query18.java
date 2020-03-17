@@ -8,8 +8,8 @@ public class Query18 {
         DatabaseLink db = DatabaseLink.Instance();
         //defining variables
         ResultSet result;
-        String districtName = "";
-        String resultNumberText = "";
+        String districtName = new String("");
+        String resultNumberText = new String("");
         do{
             //Ask user for the number of cities they want
             System.out.println("Please enter the number of cities you want to see");
@@ -18,19 +18,19 @@ public class Query18 {
             //reads the input and adds it to the query
             resultNumberText = resultNumberText.concat(scanner.nextLine());
             //casts the result into an int
-            int resultNumber =Integer.parseInt(resultNumberText);
+            int resultNumber = Integer.parseInt(resultNumberText);
             //asks the user to enter the district they want to view
             System.out.println("Please enter a valid country");
             //reads in the district
-            districtName = districtName.concat(scanner.nextLine());
+            continentName = continentName.concat(scanner.nextLine());
             //creates the query using user inputs
-            String query = "SELECT  Name, Population, (SELECT Name FROM country WHERE Code = CountryCode) FROM cities WHERE CountryCode = (SELECT Code FROM country WHERE LocalName =  " + districtName + ");";
+            String query = "SELECT city.name, population FROM City JOIN country ON (country.code = city.countrycode) WHERE city.id = country.capital AND continent = " + continentName + "ORDER BY population DESC;";
             //Gets the results from the database using the query just created
             result = db.RunQuery(query);
         }while(districtName == "" && resultNumber == 0);
         //if there is another result get the next one
         while(result.next()) {
-            System.out.println(result.getString("Name") + " | " + result.getInt("Population"));
+            System.out.println(result.getString("city.name") + " | " + result.getInt("city.population") + " | " + result.getInt("country.name"));
         }
     }
 }
