@@ -1,0 +1,564 @@
+﻿Integration Test,Class,Function,Test,Expected Output
+,,,,
+Query1,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query1,run(),Run,The result of the query outputs to the screen
+,,,,
+Query2,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query2,run(),Input a valid continent first time,The result of the query outputs to the screen
+,Query2,run(),Input a valid continent second time,The result of the query outputs to the screen
+,Query2,run(),Input an invalid continent both times,Asked to input a valid continent again
+,Query2,run(),Input an empty string,Asked to input a valid continent again
+,,,,
+Query3,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query3,run(),Input a valid region first time,The result of the query outputs to the screen
+,Query3,run(),Input a valid region second time,The result of the query outputs to the screen
+,Query3,run(),Input an invalid region both times,Asked to input a valid continent again
+,Query3,run(),Input an empty string,Asked to input a valid continent again
+,,,,
+Query4,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query4,run(),"Input ""Cheese""",Ask for a new integer
+,Query4,run(),Input an empty string,Ask for a new integer
+,Query4,run(),Input 6,6 rows of the query are output to the screen
+,,,,
+Query5,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query5,run(),Input a valid continent first time,The result of the query outputs to the screen
+,Query5,run(),Input a valid continent second time,The result of the query outputs to the screen
+,Query5,run(),Input an invalid continent both times,Asked to input a valid continent again
+,Query5,run(),Input an empty string for continent,Asked to input a valid continent again
+,Query5,run(),"Input ""Cheese"" as a limit",Ask for a new integer
+,Query5,run(),Input an empty string as a limit,Ask for a new integer
+,Query5,run(),Input 6 as limit,6 rows of the query are output to the screen
+,,,,
+Query6,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query6,run(),Input a valid region first time,The result of the query outputs to the screen
+,Query6,run(),Input a valid region second time,The result of the query outputs to the screen
+,Query6,run(),Input an invalid region both times,Asked to input a valid continent again
+,Query6,run(),Input an empty string,Asked to input a valid continent again
+,Query6,run(),"Input ""Cheese"" as a limit",Ask for a new integer
+,Query6,run(),Input an empty string as a limit,Ask for a new integer
+,Query6,run(),Input 6 as limit,6 rows of the query are output to the screen
+,,,,
+Query7,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query7,run(),Run,The result of the query outputs to the screen
+,,,,
+Query8,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query8,run(),Input a valid cities first time,The result of the query outputs to the screen
+,Query8,run(),Input a valid cities second time,The result of the query outputs to the screen
+,Query8,run(),Input a valid continent first time,The result of the query outputs to the screen
+,Query8,run(),Input a valid continent second time,The result of the query outputs to the screen
+,Query8,run(),Input an empty string for continent,Asked to input a valid continent again
+,Query8,run(),Input an invalid cities both times,Asked to input a valid cities again
+,Query8,run(),Input an empty string,Asked to input a valid cities again
+,Query8,run(),Input an invalid continent both times,Asked to input a valid continent again
+,,,,
+Query9,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query9,run(),Input a valid cities first time,The result of the query outputs to the screen
+,Query9,run(),Input a valid cities second time,The result of the query outputs to the screen
+,Query9,run(),Input a valid region first time,The result of the query outputs to the screen
+,Query9,run(),Input a valid region second time,The result of the query outputs to the screen
+,Query9,run(),Input an empty string for region,Asked to input a valid region again
+,Query9,run(),Input an invalid cities both times,Asked to input a valid cities again
+,Query9,run(),Input an empty string,Asked to input a valid cities again
+,Query9,run(),Input an invalid region both times,Asked to input a valid region again
+,,,,
+Query10,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query10,run(),Input a valid cities first time,The result of the query outputs to the screen
+,Query10,run(),Input a valid cities second time,The result of the query outputs to the screen
+,Query10,run(),Input a valid country first time,The result of the query outputs to the screen
+,Query10,run(),Input a valid country second time,The result of the query outputs to the screen
+,Query10,run(),Input an empty string for country,Asked to input a valid country again
+,Query10,run(),Input an invalid cities both times,Asked to input a valid cities again
+,Query10,run(),Input an empty string,Asked to input a valid cities again
+,Query10,run(),Input an invalid country both times,Asked to input a valid country again
+,,,,
+Query11,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query11,run(),Input a valid cities first time,The result of the query outputs to the screen
+,Query11,run(),Input a valid cities second time,The result of the query outputs to the screen
+,Query11,run(),Input a valid district first time,The result of the query outputs to the screen
+,Query11,run(),Input a valid district second time,The result of the query outputs to the screen
+,Query11,run(),Input an empty string for district,Asked to input a valid district again
+,Query11,run(),Input an invalid cities both times,Asked to input a valid cities again
+,Query11,run(),Input an empty string,Asked to input a valid cities again
+,Query11,run(),Input an invalid district both times,Asked to input a valid district again
+,,,,
+Query12,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query12,run(),"Input ""Cheese""",Ask for a new integer
+,Query12,run(),Input an empty string,Ask for a new integer
+,Query12,run(),Input 6,6 rows of the query are output to the screen
+,,,,
+Query13,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query13,run(),Input a valid cities first time,The result of the query outputs to the screen
+,Query13,run(),Input a valid cities second time,The result of the query outputs to the screen
+,Query13,run(),Input a valid continent first time,The result of the query outputs to the screen
+,Query13,run(),Input a valid continent second time,The result of the query outputs to the screen
+,Query13,run(),Input an empty string for continent,Asked to input a valid continent again
+,Query13,run(),Input an invalid cities both times,Asked to input a valid cities again
+,Query13,run(),Input an empty string,Asked to input a valid cities again
+,Query13,run(),Input an invalid continent both times,Asked to input a valid continent again
+,Query13,run(),"Input ""Cheese""",Ask for a new integer
+,Query13,run(),Input an empty string,Ask for a new integer
+,Query13,run(),Input 6,6 rows of the query are output to the screen
+,,,,
+Query14,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query14,run(),Input a valid cities first time,The result of the query outputs to the screen
+,Query14,run(),Input a valid cities second time,The result of the query outputs to the screen
+,Query14,run(),Input a valid region first time,The result of the query outputs to the screen
+,Query14,run(),Input a valid region second time,The result of the query outputs to the screen
+,Query14,run(),Input an empty string for region,Asked to input a valid region again
+,Query14,run(),Input an invalid cities both times,Asked to input a valid cities again
+,Query14,run(),Input an empty string,Asked to input a valid cities again
+,Query14,run(),Input an invalid region both times,Asked to input a valid region again
+,Query14,run(),"Input ""Cheese""",Ask for a new integer
+,Query14,run(),Input an empty string,Ask for a new integer
+,Query14,run(),Input 6,6 rows of the query are output to the screen
+,,,,
+Query15,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query15,run(),Input a valid cities first time,The result of the query outputs to the screen
+,Query15,run(),Input a valid cities second time,The result of the query outputs to the screen
+,Query15,run(),Input a valid country first time,The result of the query outputs to the screen
+,Query15,run(),Input a valid country second time,The result of the query outputs to the screen
+,Query15,run(),Input an empty string for country,Asked to input a valid country again
+,Query15,run(),Input an invalid cities both times,Asked to input a valid cities again
+,Query15,run(),Input an empty string,Asked to input a valid cities again
+,Query15,run(),Input an invalid country both times,Asked to input a valid country again
+,Query15,run(),"Input ""Cheese""",Ask for a new integer
+,Query15,run(),Input an empty string,Ask for a new integer
+,Query15,run(),Input 6,6 rows of the query are output to the screen
+,,,,
+Query16,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query16,run(),Input a valid cities first time,The result of the query outputs to the screen
+,Query16,run(),Input a valid cities second time,The result of the query outputs to the screen
+,Query16,run(),Input a valid district first time,The result of the query outputs to the screen
+,Query16,run(),Input a valid district second time,The result of the query outputs to the screen
+,Query16,run(),Input an empty string for district,Asked to input a valid district again
+,Query16,run(),Input an invalid cities both times,Asked to input a valid cities again
+,Query16,run(),Input an empty string,Asked to input a valid cities again
+,Query16,run(),Input an invalid district both times,Asked to input a valid district again
+,Query16,run(),"Input ""Cheese""",Ask for a new integer
+,Query16,run(),Input an empty string,Ask for a new integer
+,Query16,run(),Input 6,6 rows of the query are output to the screen
+,,,,
+Query17,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query17,run(),Input a valid continent first time,The result of the query outputs to the screen
+,Query17,run(),Input a valid continent second time,The result of the query outputs to the screen
+,Query17,run(),Input an invalid continent both times,Asked to input a valid continent again
+,Query17,run(),Input an empty string,Asked to input a valid continent again
+,,,,
+Query17,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query17,run(),Input a valid continent first time,The result of the query outputs to the screen
+,Query17,run(),Input a valid continent second time,The result of the query outputs to the screen
+,Query17,run(),Input an invalid continent both times,Asked to input a valid continent again
+,Query17,run(),Input an empty string,Asked to input a valid continent again
+,,,,
+Query18,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query18,run(),Input a valid region first time,The result of the query outputs to the screen
+,Query18,run(),Input a valid region second time,The result of the query outputs to the screen
+,Query18,run(),Input an invalid region both times,Asked to input a valid continent again
+,Query18,run(),Input an empty string,Asked to input a valid continent again
+,,,,
+Query19,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query19,run(),Input a valid region first time,The result of the query outputs to the screen
+,Query19,run(),Input a valid region second time,The result of the query outputs to the screen
+,Query19,run(),Input an invalid region both times,Asked to input a valid region
+,Query19,run(),Input an empty string as a region,Asked to input a valid region
+,,,,
+Query20,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query20,run(),"Input ""Cheese"" as a limit",Ask for a new integer
+,Query20,run(),Input an empty string as a limit,Ask for a new integer
+,Query20,run(),Input 6 as limit,6 rows of the query are output to the screen
+,Query20,run(),Input 16777216,Output all of rows of the result set
+,,,,
+Query21,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query21,run(),Input a valid continent first time,The result of the query outputs to the screen
+,Query21,run(),Input a valid continent second time,The result of the query outputs to the screen
+,Query21,run(),Input an invalid continent both times,Asked to input a valid continent
+,Query21,run(),Input an empty string for continent,Asked to input a valid continent
+,Query21,run(),"Input ""Cheese"" as a limit",Ask for a new integer
+,Query21,run(),Input an empty string as a limit,Ask for a new integer
+,Query21,run(),Input 6 as limit,6 rows of the query are output to the screen
+,Query21,run(),Input 16777216,Output all of rows of the result set
+,,,,
+Query22,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query22,run(),Input a valid region first time,The result of the query outputs to the screen
+,Query22,run(),Input a valid region second time,The result of the query outputs to the screen
+,Query22,run(),Input an invalid region both times,Asked to input a valid region
+,Query22,run(),Input an empty string as region,Asked to input a valid region
+,Query22,run(),"Input ""Cheese"" as a limit",Ask for a new integer
+,Query22,run(),Input an empty string as a limit,Ask for a new integer
+,Query22,run(),Input 6 as limit,6 rows of the query are output to the screen
+,Query22,run(),Input 16777216,Output all of rows of the result set
+,,,,
+Query23,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query23,run(),Run,The result of the query outputs to the screen
+,,,,
+Query24,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query24,run(),Run,The result of the query outputs to the screen
+,,,,
+Query25,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Query25,run(),Run,The result of the query outputs to the screen
+,,,,
+Population of the World,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Population of the World,run(),Run,The result of the query outputs to the screen
+,,,,
+Population of a Continent,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Population of a Continent,run(),Input a valid continent first time,The result of the query outputs to the screen
+,Population of a Continent,run(),Input a valid continent second time,The result of the query outputs to the screen
+,Population of a Continent,run(),Input an invalid continent both times,Asked to input a valid continent
+,Population of a Continent,run(),Input an empty string for continent,Asked to input a valid continent
+,,,,
+Population of a Country,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Population of a Country,run(),Input a valid country first time,The result of the query outputs to the screen
+,Population of a Country,run(),Input a valid country second time,The result of the query outputs to the screen
+,Population of a Country,run(),Input an invalid country both times,Asked to input a valid country
+,Population of a Country,run(),Input an empty string as country,Asked to input a valid country
+,,,,
+Population of a District,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Population of a District,run(),Input a valid district first time,The result of the query outputs to the screen
+,Population of a District,run(),Input a valid district second time,The result of the query outputs to the screen
+,Population of a District,run(),Input an invalid district both times,Asked to input a valid district
+,Population of a District,run(),Input an empty string as district,Asked to input a valid district
+,,,,
+Population of a City,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,Population of a City,run(),Input a valid city first time,The result of the query outputs to the screen
+,Population of a City,run(),Input a valid city second time,The result of the query outputs to the screen
+,Population of a City,run(),Input an invalid city both times,Asked to input a valid city
+,Population of a City,run(),Input an empty string as city,Asked to input a valid city
+,,,,
+People who speak Chinese,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,People who speak Chinese,run(),Run,The result of the query outputs to the screen
+,,,,
+People who speak English,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,People who speak English,run(),Run,The result of the query outputs to the screen
+,,,,
+People who speak Hindi,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,People who speak Hindi,run(),Run,The result of the query outputs to the screen
+,,,,
+People who speak Spanish,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,People who speak Spanish,run(),Run,The result of the query outputs to the screen
+,,,,
+People who speak Arabic,DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+,DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+,DatabaseLink,disconnect(),connection is null,Nothing happens
+,DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+,DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+,DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+,DatabaseLink,runQuery(),Input is null,Null is returned
+,DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+,DatabaseLink,runQuery(),Input is 4,Null is returned
+,DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,People who speak Arabic,run(),Run,The result of the query outputs to the screen

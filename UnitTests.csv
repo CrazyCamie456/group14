@@ -1,0 +1,218 @@
+﻿Class,Function,Test,Expected Output
+,,,
+DatabaseLink,Instance(),instance is null,Instance is initialised then returned.
+DatabaseLink,Instance(),instance is already a reference to a DatabaseLink,Instance is returned.
+DatabaseLink,disconnect(),connection is null,Nothing happens
+DatabaseLink,disconnect(),connection is set to a connection to a database,The connction is closed and instance is set to null
+DatabaseLink,Constructor,Create an instance of DatabaseLink,An link to a database is created
+DatabaseLink,runQuery(),Input is a valid SQL Query,A resultSet is returned.
+DatabaseLink,runQuery(),Input is null,Null is returned
+DatabaseLink,runQuery(),Input is an invalid SQL Query,Null is returned
+DatabaseLink,runQuery(),Input is 4,Null is returned
+DatabaseLink,runQuery(),"Input is 20,000 characters long invalid SQL",Null is returned
+,,,
+Query1,run(),Run,The result of the query outputs to the screen
+,,,
+Query2,run(),Input a valid continent first time,The result of the query outputs to the screen
+Query2,run(),Input a valid continent second time,The result of the query outputs to the screen
+Query2,run(),Input an invalid continent both times,Asked to input a valid continent
+Query2,run(),Input an empty string,Asked to input a valid continent
+,,,
+Query3,run(),Input a valid region first time,The result of the query outputs to the screen
+Query3,run(),Input a valid region second time,The result of the query outputs to the screen
+Query3,run(),Input an invalid region both times,Asked to input a valid continent 
+Query3,run(),Input an empty string,Asked to input a valid continent
+,,,
+Query4,run(),"Input ""Cheese""",Ask for a new integer
+Query4,run(),Input an empty string,Ask for a new integer
+Query4,run(),Input 6,6 rows of the query are output to the screen
+Query4,run(),Input 16777216,Output all of rows of the result set
+,,,
+Query5,run(),Input a valid continent first time,The result of the query outputs to the screen
+Query5,run(),Input a valid continent second time,The result of the query outputs to the screen
+Query5,run(),Input an invalid continent both times,Asked to input a valid continent
+Query5,run(),Input an empty string for continent,Asked to input a valid continent
+Query5,run(),"Input ""Cheese"" as a limit",Ask for a new integer
+Query5,run(),Input an empty string as a limit,Ask for a new integer
+Query5,run(),Input 6 as limit,6 rows of the query are output to the screen
+Query5,run(),Input 16777216,Output all of rows of the result set
+,,,
+Query6,run(),Input a valid region first time,The result of the query outputs to the screen
+Query6,run(),Input a valid region second time,The result of the query outputs to the screen
+Query6,run(),Input an invalid region both times,Asked to input a valid region
+Query6,run(),Input an empty string as region,Asked to input a valid region
+Query6,run(),"Input ""Cheese"" as a limit",Ask for a new integer
+Query6,run(),Input an empty string as a limit,Ask for a new integer
+Query6,run(),Input 6 as limit,6 rows of the query are output to the screen
+Query6,run(),Input 16777216,Output all of rows of the result set
+,,,
+Query7,run(),Run,The result of the query outputs to the screen
+,,,
+Query8,run(),Input a valid cities first time,The result of the query outputs to the screen
+Query8,run(),Input a valid cities second time,The result of the query outputs to the screen
+Query8,run(),Input a valid continent first time,The result of the query outputs to the screen
+Query8,run(),Input a valid continent second time,The result of the query outputs to the screen
+Query8,run(),Input an empty string for continent,Asked to input a valid continent again
+Query8,run(),Input an invalid cities both times,Asked to input a valid cities again
+Query8,run(),Input an empty string,Asked to input a valid cities again
+Query8,run(),Input an invalid continent both times,Asked to input a valid continent again
+,,,
+Query9,run(),Input a valid cities first time,The result of the query outputs to the screen
+Query9,run(),Input a valid cities second time,The result of the query outputs to the screen
+Query9,run(),Input a valid region first time,The result of the query outputs to the screen
+Query9,run(),Input a valid region second time,The result of the query outputs to the screen
+Query9,run(),Input an empty string for region,Asked to input a valid region again
+Query9,run(),Input an invalid cities both times,Asked to input a valid cities again
+Query9,run(),Input an empty string,Asked to input a valid cities again
+Query9,run(),Input an invalid region both times,Asked to input a valid region again
+,,,
+Query10,run(),Input a valid cities first time,The result of the query outputs to the screen
+Query10,run(),Input a valid cities second time,The result of the query outputs to the screen
+Query10,run(),Input a valid country first time,The result of the query outputs to the screen
+Query10,run(),Input a valid country second time,The result of the query outputs to the screen
+Query10,run(),Input an empty string for country,Asked to input a valid country again
+Query10,run(),Input an invalid cities both times,Asked to input a valid cities again
+Query10,run(),Input an empty string,Asked to input a valid cities again
+Query10,run(),Input an invalid country both times,Asked to input a valid country again
+,,,
+Query11,run(),Input a valid cities first time,The result of the query outputs to the screen
+Query11,run(),Input a valid cities second time,The result of the query outputs to the screen
+Query11,run(),Input a valid district first time,The result of the query outputs to the screen
+Query11,run(),Input a valid district second time,The result of the query outputs to the screen
+Query11,run(),Input an empty string for district,Asked to input a valid district again
+Query11,run(),Input an invalid cities both times,Asked to input a valid cities again
+Query11,run(),Input an empty string,Asked to input a valid cities again
+Query11,run(),Input an invalid district both times,Asked to input a valid district again
+,,,
+Query12,run(),"Input ""Cheese""",Ask for a new integer
+Query12,run(),Input an empty string,Ask for a new integer
+Query12,run(),Input 6,6 rows of the query are output to the screen
+,,,
+Query13,run(),Input a valid cities first time,The result of the query outputs to the screen
+Query13,run(),Input a valid cities second time,The result of the query outputs to the screen
+Query13,run(),Input a valid continent first time,The result of the query outputs to the screen
+Query13,run(),Input a valid continent second time,The result of the query outputs to the screen
+Query13,run(),Input an empty string for continent,Asked to input a valid continent again
+Query13,run(),Input an invalid cities both times,Asked to input a valid cities again
+Query13,run(),Input an empty string,Asked to input a valid cities again
+Query13,run(),Input an invalid continent both times,Asked to input a valid continent again
+Query13,run(),"Input ""Cheese""",Ask for a new integer
+Query13,run(),Input an empty string,Ask for a new integer
+Query13,run(),Input 6,6 rows of the query are output to the screen
+,,,
+Query14,run(),Input a valid cities first time,The result of the query outputs to the screen
+Query14,run(),Input a valid cities second time,The result of the query outputs to the screen
+Query14,run(),Input a valid region first time,The result of the query outputs to the screen
+Query14,run(),Input a valid region second time,The result of the query outputs to the screen
+Query14,run(),Input an empty string for region,Asked to input a valid region again
+Query14,run(),Input an invalid cities both times,Asked to input a valid cities again
+Query14,run(),Input an empty string,Asked to input a valid cities again
+Query14,run(),Input an invalid region both times,Asked to input a valid region again
+Query14,run(),"Input ""Cheese""",Ask for a new integer
+Query14,run(),Input an empty string,Ask for a new integer
+Query14,run(),Input 6,6 rows of the query are output to the screen
+,,,
+Query15,run(),Input a valid cities first time,The result of the query outputs to the screen
+Query15,run(),Input a valid cities second time,The result of the query outputs to the screen
+Query15,run(),Input a valid country first time,The result of the query outputs to the screen
+Query15,run(),Input a valid country second time,The result of the query outputs to the screen
+Query15,run(),Input an empty string for country,Asked to input a valid country again
+Query15,run(),Input an invalid cities both times,Asked to input a valid cities again
+Query15,run(),Input an empty string,Asked to input a valid cities again
+Query15,run(),Input an invalid country both times,Asked to input a valid country again
+Query15,run(),"Input ""Cheese""",Ask for a new integer
+Query15,run(),Input an empty string,Ask for a new integer
+Query15,run(),Input 6,6 rows of the query are output to the screen
+,,,
+Query16,run(),Input a valid cities first time,The result of the query outputs to the screen
+Query16,run(),Input a valid cities second time,The result of the query outputs to the screen
+Query16,run(),Input a valid district first time,The result of the query outputs to the screen
+Query16,run(),Input a valid district second time,The result of the query outputs to the screen
+Query16,run(),Input an empty string for district,Asked to input a valid district again
+Query16,run(),Input an invalid cities both times,Asked to input a valid cities again
+Query16,run(),Input an empty string,Asked to input a valid cities again
+Query16,run(),Input an invalid district both times,Asked to input a valid district again
+Query16,run(),"Input ""Cheese""",Ask for a new integer
+Query16,run(),Input an empty string,Ask for a new integer
+Query16,run(),Input 6,6 rows of the query are output to the screen
+,,,
+Query17,run(),Input a valid continent first time,The result of the query outputs to the screen
+Query17,run(),Input a valid continent second time,The result of the query outputs to the screen
+Query17,run(),Input an invalid continent both times,Asked to input a valid continent again
+Query17,run(),Input an empty string,Asked to input a valid continent again
+,,,
+Query18,run(),Input a valid region first time,The result of the query outputs to the screen
+Query18,run(),Input a valid region second time,The result of the query outputs to the screen
+Query18,run(),Input an invalid region both times,Asked to input a valid continent again
+Query18,run(),Input an empty string,Asked to input a valid continent again
+,,,
+Query19,run(),Input a valid region first time,The result of the query outputs to the screen
+Query19,run(),Input a valid region second time,The result of the query outputs to the screen
+Query19,run(),Input an invalid region both times,Asked to input a valid region
+Query19,run(),Input an empty string as a region,Asked to input a valid region
+,,,
+Query20,run(),"Input ""Cheese"" as a limit",Ask for a new integer
+Query20,run(),Input an empty string as a limit,Ask for a new integer
+Query20,run(),Input 6 as limit,6 rows of the query are output to the screen
+Query20,run(),Input 16777216,Output all of rows of the result set
+,,,
+Query21,run(),Input a valid continent first time,The result of the query outputs to the screen
+Query21,run(),Input a valid continent second time,The result of the query outputs to the screen
+Query21,run(),Input an invalid continent both times,Asked to input a valid continent
+Query21,run(),Input an empty string for continent,Asked to input a valid continent
+Query21,run(),"Input ""Cheese"" as a limit",Ask for a new integer
+Query21,run(),Input an empty string as a limit,Ask for a new integer
+Query21,run(),Input 6 as limit,6 rows of the query are output to the screen
+Query21,run(),Input 16777216,Output all of rows of the result set
+,,,
+Query22,run(),Input a valid region first time,The result of the query outputs to the screen
+Query22,run(),Input a valid region second time,The result of the query outputs to the screen
+Query22,run(),Input an invalid region both times,Asked to input a valid region
+Query22,run(),Input an empty string as region,Asked to input a valid region
+Query22,run(),"Input ""Cheese"" as a limit",Ask for a new integer
+Query22,run(),Input an empty string as a limit,Ask for a new integer
+Query22,run(),Input 6 as limit,6 rows of the query are output to the screen
+Query22,run(),Input 16777216,Output all of rows of the result set
+,,,
+Query23,run(),Run,The result of the query outputs to the screen
+,,,
+Query24,run(),Run,The result of the query outputs to the screen
+,,,
+Query25,run(),Run,The result of the query outputs to the screen
+,,,
+Population of the World,,Run,The result of the query outputs to the screen
+,,,
+Population of a Continent,,Input a valid continent first time,The result of the query outputs to the screen
+Population of a Continent,,Input a valid continent second time,The result of the query outputs to the screen
+Population of a Continent,,Input an invalid continent both times,Asked to input a valid continent
+Population of a Continent,,Input an empty string for continent,Asked to input a valid continent
+,,,
+Population of a Region,,Input a valid region first time,The result of the query outputs to the screen
+Population of a Region,,Input a valid region second time,The result of the query outputs to the screen
+Population of a Region,,Input an invalid region both times,Asked to input a valid region
+Population of a Region,,Input an empty string as region,Asked to input a valid region
+,,,
+Population of a Country,,Input a valid country first time,The result of the query outputs to the screen
+Population of a Country,,Input a valid country second time,The result of the query outputs to the screen
+Population of a Country,,Input an invalid country both times,Asked to input a valid country
+Population of a Country,,Input an empty string as country,Asked to input a valid country
+,,,
+Population of a District,,Input a valid district first time,The result of the query outputs to the screen
+Population of a District,,Input a valid district second time,The result of the query outputs to the screen
+Population of a District,,Input an invalid district both times,Asked to input a valid district
+Population of a District,,Input an empty string as district,Asked to input a valid district
+,,,
+Population of a City,,Input a valid city first time,The result of the query outputs to the screen
+Population of a City,,Input a valid city second time,The result of the query outputs to the screen
+Population of a City,,Input an invalid city both times,Asked to input a valid city
+Population of a City,,Input an empty string as city,Asked to input a valid city
+,,,
+People who speak Chinese,,Run,The result of the query outputs to the screen
+,,,
+People who speak English,,Run,The result of the query outputs to the screen
+,,,
+People who speak Hindi,,Run,The result of the query outputs to the screen
+,,,
+People who speak Spanish,,Run,The result of the query outputs to the screen
+,,,
+People who speak Arabic,,Run,The result of the query outputs to the screen
