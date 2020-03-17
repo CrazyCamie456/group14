@@ -7,12 +7,12 @@ public class Query7 {
         DatabaseLink db = DatabaseLink.Instance();
 
         //creates the query
-        String query = "SELECT Name, Population, District, (SELECT Name FROM country WHERE Code = CountryCode)  FROM cities ORDER BY Population DESC;";
+        String query = "SELECT city.name, city.population, country.name FROM city JOIN country ON (country.code = city.countrycode) ORDER BY Population DESC;";
         //Gets the results from the database using the query just created
         ResultSet result = db.RunQuery(query);
         //if there another result get the next one
         while(result.next()) {
-            System.out.println(result.getString("Name") + " | " + result.getInt("Population"));
+            System.out.println(result.getString("city") + " | " + result.getInt("city.population")) + " | " + result.getString("country") + " | " + result.getString("district");
         }
     }
 }

@@ -8,7 +8,7 @@ public class Query9 {
 
         DatabaseLink db = DatabaseLink.Instance();
         //defining variables
-        String regionName = "";
+        String regionName = new String("");
         ResultSet result;
 
         do{
@@ -20,13 +20,13 @@ public class Query9 {
             //reads in the region
             regionName = regionName.concat(scanner.nextLine());
             //creates the query using user inputs
-            String query = "SELECT Name, Population, District, (SELECT Name FROM country WHERE Code = CountryCode)  FROM cities WHERE (SELECT Name FROM Country WHERE " + regionName + "ORDER BY Population DESC;";
+            String query = "SELECT city.name, city.Population, country.name, District, FROM City JOIN country ON (country.code = city.countrycode) WHERE region " + regionName + "ORDER BY Population DESC;";
             //Gets the results from the database using the query just created
             result = db.RunQuery(query);
         }while(result.length() == 0 );
         //if there another result get the next one
         while(result.next()) {
-            System.out.println(result.getString("Name") + " | " + result.getInt("Population"));
+            System.out.println(result.getString("city") + " | " + result.getInt("city.population")) + " | " + result.getString("country.name") + " | " + result.getString("city.district");
         }
     }
 }

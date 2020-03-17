@@ -7,7 +7,7 @@ public class Query8 {
 
         DatabaseLink db = DatabaseLink.Instance();
         //defining variables
-        String continentName = "";
+        String continentName = new String("");
         ResultSet result;
         do{
             //asks the user to enter the continent they want to view
@@ -18,7 +18,7 @@ public class Query8 {
             //reads in the continent
             continentName = continentName.concat(scanner.nextLine());
             //creates the query using user inputs
-            String query = "SELECT Name, Population, District, (SELECT Name FROM country WHERE Code = CountryCode)  FROM cities WHERE (SELECT Name FROM Country WHERE " + continentName + "ORDER BY Population DESC;";
+            String query = "SELECT city.name, city.population, country.name, city.district FROM city JOIN country ON (country.code = city.countrycode) WHERE continent = " + continentName + "ORDER BY Population DESC;";
 
             //Gets the results from the database using the query just created
             result = db.RunQuery(query);
@@ -29,7 +29,7 @@ public class Query8 {
         //if there another result get the next one
 
         while(result.next()) {
-            System.out.println(result.getString("Name") + " | " + result.getInt("Population"));
+            System.out.println(result.getString("city.name") + " | " + result.getInt("city.population")) + " | " + result.getString("country.name") + " | " + result.getString("city.district");
         }
     }
 }

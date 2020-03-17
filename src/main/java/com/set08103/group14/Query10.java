@@ -7,7 +7,7 @@ public class Query10 {
 
         DatabaseLink db = DatabaseLink.Instance();
         //defining variables
-        String countryName = "";
+        String countryName = new String("");
         ResultSet result;
         do{
 
@@ -17,7 +17,7 @@ public class Query10 {
             //Creating a scanner to read in the user input
             Scanner scanner = new Scanner(System. in);
 
-            String query = "SELECT Name, Population, District, (SELECT Name FROM country WHERE Code = CountryCode)  FROM cities WHERE (SELECT Name FROM Country WHERE " + countryName + "ORDER BY Population DESC;";
+            String query = "SELECT city.name, city.Population, country.name, District FROM City JOIN country ON (country.code = city.countrycode) WHERE countryName = " + countryName + "ORDER BY Population DESC;";
 
 
             result = db.RunQuery(query);
@@ -26,7 +26,7 @@ public class Query10 {
 
         }while(result.length() == 0 );
         while(result.next()) {
-            System.out.println(result.getString("Name") + " | " + result.getInt("Population"));
+            System.out.println(result.getString("city") + " | " + result.getInt("city.population")) + " | " + result.getString("country.name") + " | " + result.getString("city.district");
         }
     }
 }
