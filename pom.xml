@@ -27,7 +27,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.set08103.group14.Main</mainClass>
+                            <mainClass>com.set08103.group14.App</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
