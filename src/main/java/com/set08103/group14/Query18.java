@@ -8,7 +8,7 @@ public class Query18 {
         DatabaseLink db = DatabaseLink.Instance();
         //defining variables
         ResultSet result;
-        String districtName = new String("");
+        String continentName = new String("");
         String resultNumberText = new String("");
         do{
             //Ask user for the number of cities they want

@@ -8,8 +8,8 @@ public class Query16 {
         DatabaseLink db = DatabaseLink.Instance();
         //defining variables
         ResultSet result;
-        String districtName = "";
-        String resultNumberText = "";
+        String districtName = new String("");
+        String resultNumberText = new String("");
         do{
             //Ask user for the number of cities they want
             System.out.println("Please enter the number of cities you want to see");
