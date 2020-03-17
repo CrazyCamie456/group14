@@ -8,14 +8,14 @@ public class Query17 {
         ResultSet result;
         do{
             //creates the query
-            String query = "SELECT Name, Population, (SELECT Name FROM country WHERE Code = CountryCode) FROM cities WHERE CountryCode = (SELECT Capital From country);";
+            String query = "SELECT city.name, city.population, , country.name  FROM City JOIN country ON (country.code = city.countrycode) WHERE city.id = country.capital ORDER BY population DESC;";
             //Gets the results from the database using the query just created
             result = db.RunQuery(query);
         }while(result.length() == 0 );
         //if there is more than one result get the next one
 
         while(result.next()) {
-            System.out.println(result.getString("Name") + " | " + result.getInt("Population"));
+            System.out.println(result.getString("city.name") + " | " + result.getInt("city.population") + " | " + result.getInt("country.name"));
         }
     }
 }
