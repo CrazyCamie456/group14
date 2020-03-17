@@ -1,29 +1,44 @@
 package com.set08103.group14;
+
+import java.sql.*;
 import java.util.Scanner;
+
+/*
+    Implements the 21st query.
+   The top N populated capital cities in a continent WHERE N is provided by the user.
+*/
 public class Query21 {
+
+    /*
+        Runs a query and prints the top N capital cities in a continent sorted by population.
+    */
     public static void run() {
         DatabaseLink db = DatabaseLink.Instance();
-        ResultSet result;
-        do{
-            String N = "";
-            String cont = "";
-            System.out.println("Please enter the continent you wish to view the top N populated capital cities of")
-            Scanner scanner = new Scanner(System. in);
-            cont = cont.concat(scanner.nextLine());
-            System.out.println("To see the top N populated capital cities in the continent, please enter N as a number");
+        Scanner in = new Scanner(System.in);
 
-            N = N.concat(scanner.nextLine());
-            int resultNumber = Integer.parseInt(N);
+        String inputCont;
+        System.out.println("Please enter a Continent to display capital cities from.");
+        inputCont = in.nextLine();
 
-            String query = "SELECT Name, Population, (SELECT Name FROM Country WHERE Code = CountryCode) FROM city WHERE ID = (SELECT Capital FROM country WHERE Continent =" + cont + ") ORDER BY Population DESC LIMIT" + resultNumber + ")";
+        String query = "SELECT city.name AS city, city.population, country.name AS country, continent FROM city JOIN country ON (country.code = city.countrycode) WHERE city.ID = country.capital AND continent =" + inputCont + " ORDER BY population;";
+        int limit = in.nextInt();
+        int i = 0;
 
-            result = db.RunQuery(query);
-
-
-
-        }while(result.length() == 0 );
-        while(result.next()) {
-            System.out.println(result.getString("Name") + " | " + result.getInt("Population"));
+        ResultSet result = db.runQuery(query);
+        try {
+            //While there are more rows to read, read them.
+            while (result.next() && i < limit) {
+                System.out.println(result.getInt("Code")  + "\t\t| " +
+                        result.getString("Name") + "\t\t| " +
+                        result.getString("Continent") + "\t\t| " +
+                        result.getString("Region") + "\t\t| " +
+                        result.getInt("Population") + "\t\t | " +
+                        result.getString("City")
+                );
+                i++;
+            }
+        } catch (Exception e) {
+            e.getMessage();
         }
     }
 }
