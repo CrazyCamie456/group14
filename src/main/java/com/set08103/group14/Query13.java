@@ -24,13 +24,13 @@ public class Query13 {
             //reads in the continent
             continentName = continentName.concat(scanner.nextLine());
             //creates the query using user inputs
-            String query = "SELECT TOP "+resultNumber+" Name, Population, District, (SELECT Name FROM country WHERE Code = CountryCode)  FROM cities WHERE CountryCode = (SELECT Code FROM country WHERE Continent =  " + continentName + ");";
+            String query ="SELECT city.name AS city, city.population, country.name AS country, district FROM city JOIN country ON (country.code = city.countrycode) WHERE continent = " + continentName + "  ORDER BY population DESC LIMIT" + resultNumber + ";";
             //Gets the results from the database using the query just created
             result = db.RunQuery(query);
         }while(result.length() == 0 );
         //if there another result get the next one
         while(result.next()) {
-            System.out.println(result.getString("Name") + " | " + result.getInt("Population"));
+            System.out.println(result.getString("city") + " | " + result.getInt("city.population")) + " | " + result.getString("country") + " | " + result.getString("district");
         }
     }
 }
