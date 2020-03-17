@@ -6,10 +6,15 @@ public class QueryContinentPopulation {
         //creates an instance link to the database
         DatabaseLink db = DatabaseLink.Instance();
 
-        String input = new String;
+        String countryName = new String("");
+
+        //asks the user to enter the country they want to view
+        System.out.println("Please enter a valid country");
+        //reads in the country
+        countryName = countryName.concat(scanner.nextLine());
 
         //creates the query
-        String query = "SELECT Name, Population FROM country WHERE Name = " + input + " ORDER BY Population DESC;";
+        String query = "SELECT Name, Population FROM country WHERE Name = " + countryName + " ORDER BY Population DESC;";
         //Gets the results from the database using the query just created
         ResultSet result = db.RunQuery(query);
         //if there another result get the next one
